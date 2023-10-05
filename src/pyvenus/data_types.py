@@ -343,8 +343,8 @@ class Sequence:
             self.__df,
             pd.DataFrame(
                 {
-                    'labware': dataframe['labware'].to_list(),
-                    'position': dataframe['position'].to_list()
+                    'labware': dataframe['labware'].astype(str).to_list(),
+                    'position': dataframe['position'].astype(str).to_list()
                 }
             )],
             ignore_index = True
